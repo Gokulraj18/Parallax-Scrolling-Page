@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time to have new</span><br>Adventure</h2>
+        <img src="./parallax/bird1.png" id="bird1" alt="">
+        <img src="./parallax/bird2.png" id="bird2"  alt="">
+        <img src="./parallax/forest.png" id="forest" alt="">
+        <a href="#" id="btn">Explore</a>
+        <img src="./parallax/rocks.png" id="rocks" alt="">
+        <img src="./parallax/water.png" id="water" alt="">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere delectus, omnis voluptatem inventore odio repudiandae optio culpa et laborum quasi repellendus vitae, a doloribus error, similique deleniti voluptates ut excepturi. Rerum perferendis accusamus vitae, inventore eius id hic nemo fuga iste, quae facilis error. Quos sequi neque fugit nostrum reprehenderit autem exercitationem eos nisi quo nobis odio tempora blanditiis optio similique at, iste quis fugiat, quod sed! Eum dolore tempora deleniti, quidem debitis quos optio necessitatibus reiciendis asperiores quod quibusdam quisquam est quo repellat! Consectetur cumque deleniti inventore blanditiis, ex, omnis, nostrum numquam minima hic beatae voluptatum quae dolorum doloribus?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus temporibus aliquam ullam eum enim esse libero rem labore porro commodi dolorum laudantium inventore architecto similique molestias impedit quasi perferendis quod nihil doloribus quaerat, iusto fugit! Maxime corporis voluptas nostrum pariatur libero doloribus perferendis nihil a temporibus, architecto voluptates, in sed odio minus quam voluptate similique aperiam, recusandae consequatur dolorum velit id deserunt. Facilis ratione esse quia non nobis inventore veritatis porro autem ut iure provident voluptate unde cupiditate eos dolorum nulla, voluptas, hic fugiat quae quod corrupti. Adipisci voluptas saepe quas molestias ut et accusantium alias culpa? Assumenda, aperiam laudantium?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, architecto laborum. Aperiam unde fugit distinctio quaerat sed maxime enim excepturi aliquam perspiciatis aspernatur consequuntur, quis nesciunt! Odit, non possimus! Temporibus, quisquam iusto voluptatem, impedit quia pariatur repudiandae perferendis magnam eligendi sequi vel? Natus aut iure, deleniti vero, eaque voluptatibus optio qui numquam ea cupiditate explicabo, nesciunt soluta quae delectus provident obcaecati consequuntur quis modi voluptas laborum minima accusamus eveniet. Fuga quas voluptates odit voluptatum, magni incidunt cumque libero est nesciunt exercitationem assumenda quia voluptas, provident officia, at itaque quidem minima voluptatem nihil eligendi praesentium nobis repellat recusandae? Obcaecati, libero recusandae.</p>
+    </div>
+
+    <script>
+        let text=document.getElementById('text');
+        let bird1=document.getElementById('bird1');
+        let bird2=document.getElementById('bird2');
+        let btn=document.getElementById('btn');
+        let rocks=document.getElementById('rocks');
+        let forest=document.getElementById('forest');
+        let water=document.getElementById('water');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+
+            text.style.top=50+value*-0.5+'%';
+            bird1.style.top=value*-1.5+'px';
+            bird1.style.left=value*2+'px';
+            bird2.style.top=value*-1.5+'px';
+            bird2.style.left=value*-5+'px';
+            btn.style.marginTop=value*1.5+'px';
+            rocks.style.top=value*-0.12+'px';
+            forest.style.top=value*0.25+'px';
+            header.style.top=value*0.5+'px';
+
+        })
+
+
+    </script>
+</body>
+</html>
